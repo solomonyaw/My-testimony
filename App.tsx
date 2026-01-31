@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Layout } from './components/Layout';
 import { ArticleSection } from './components/ArticleSection';
@@ -133,7 +132,8 @@ const App: React.FC = () => {
             <p className="text-gray-400 text-sm">Identifying the pyramidal structures of America as mirrors of ancient enslavement, pointing toward a Luciferian control grid.</p>
           </div>
           <div className="space-y-4 bg-gray-950 p-8 rounded-3xl border border-gray-800">
-            <img src="input_file_0.png" alt="Laser Vision" className="rounded-xl mb-6" />
+            {/* Fixed: Replaced duplicate book cover with Synergetics image for Laser Manifesto section */}
+            <img src="input_file_2.png" alt="Laser Vision" className="rounded-xl mb-6 h-48 w-full object-cover" />
             <h3 className="font-bold text-xl text-pink-500 uppercase tracking-tighter">Laser Manifesto</h3>
             <p className="text-gray-400 text-sm">Using spiritual 'lasers' to destroy the all-seeing eye of the Illuminati and reclaim divine identity through truth.</p>
           </div>
