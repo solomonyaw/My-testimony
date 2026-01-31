@@ -52,7 +52,7 @@ const App: React.FC = () => {
         id="hansel"
         year="2006"
         title="Holy Sweat & Servant Leadership"
-        image="input_file_9.png"
+        image="input_file_0.png"
         imageCaption="Tim Hansel's 'Holy Sweat' - A foundation of vision and servant leadership."
         content={[
           "In 2006, while studying at Tema Secondary School in Ghana, I found a book that profoundly shaped my spiritual journey. Visiting my cousin—the caretaker of a wealthy businessman's house—I discovered 'Holy Sweat' by Tim Hansel on his bookshelves.",
