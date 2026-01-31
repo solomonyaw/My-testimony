@@ -10,7 +10,27 @@
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+      /* The main container uses display: flex to arrange its children in a row */
+        .container2 {
+            display: flex;
+            align-items: center; /* Aligns items vertically in the center of the container */
+            justify-content: center; /* Centers items horizontally within the container (optional) */
+            gap: 20px; /* Adds space between the image and the text content */
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto; /* Centers the container itself on the page */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
 
+        /* Styling for the image within the container */
+        .flex-item img {
+            max-width: 100%; /* Ensures the image is responsive */
+            height: auto;
+            display: block; /* Removes extra space below the image */
+            border-radius: 5px;
+        }
       .flex-container {
     display: flex;         
         flex-direction: row;/* Activates flexbox layout */
@@ -277,6 +297,24 @@
             </div>
           </div>
         </section>
+         <div class="container1">
+        <!-- Flex Item 1: The Image -->
+        <div class="flex-item">
+            <!-- Replace 'https://via.placeholder.com' with the URL or local path to your image -->
+            <img src="fuller.png" alt="Placeholder Image">
+        </div>
+
+        <!-- Flex Item 2: The Text Content -->
+        <div class="text-content">
+            <h2>Example Title</h2>
+            <p>
+               In his thousands of lectures, Fuller urged his audiences to study synergetics, saying "I am confident that humanity's survival depends on all of our willingness to comprehend feelingly the way nature works."
+            </p>
+            <p>
+                You can easily add more content here.
+            </p>
+        </div>
+    </div>
 
         <!-- Part 4: The Great Resistance -->
         <section class="py-20 px-6 max-w-6xl mx-auto bg-gray-900/50 rounded-[4rem] my-12">
