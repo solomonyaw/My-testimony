@@ -11,7 +11,8 @@
     <style>
 
       .flex-container {
-    display: flex;          /* Activates flexbox layout */
+    display: flex;         
+        flex-direction: row;/* Activates flexbox layout */
     justify-content: center; /* Centers the items within the container horizontally */
     align-items: center;    /* Aligns items vertically in the middle */
     gap: 20px;              /* Adds space between the items */
@@ -23,7 +24,7 @@
 .flex-container > * {
     /* Ensures consistent sizing. Adjust the width as needed. 
        calc(33.33% - 14px) makes each item roughly one-third of the container width minus gap space. */
-    width: 1000px; 
+    width: 500px; 
     
     /* Ensures all elements have a consistent aspect ratio (standard 16:9 for videos/placeholders) */
     height: 500px; 
