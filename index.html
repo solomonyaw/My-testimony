@@ -9,6 +9,27 @@
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+
+      .flex-container {
+    display: flex;          /* Activates flexbox layout */
+    justify-content: center; /* Centers the items within the container horizontally */
+    align-items: center;    /* Aligns items vertically in the middle */
+    gap: 20px;              /* Adds space between the items */
+    flex-wrap: wrap;        /* Allows items to wrap onto a new line if the screen is too small */
+    padding: 20px;
+}
+
+/* Style for all direct children of the flex container (image and iframes) */
+.flex-container > * {
+    /* Ensures consistent sizing. Adjust the width as needed. 
+       calc(33.33% - 14px) makes each item roughly one-third of the container width minus gap space. */
+    width: calc(33.33% - 14px); 
+    
+    /* Ensures all elements have a consistent aspect ratio (standard 16:9 for videos/placeholders) */
+    height: auto; 
+    aspect-ratio: 16 / 9;
+}
+      
       body {
         background-color: #030712;
         color: #f3f4f6;
@@ -223,7 +244,19 @@
                   <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Ge4BEdyZ8bM" title="Lupe Fiasco - I'm Beamin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p class="mt-3 text-center text-xs text-gray-500 uppercase tracking-widest font-medium">Video: Lupe Fiasco - I'm Beamin</p>
-                <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/561537058_10226403598990201_6595890228945255927_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEawydBcs_IKEs8366TCFrXMkbwYarbrJgyRvBhqtusmNI16faDbmk3qQzVMMbZeCA&_nc_ohc=g86aT19wUzQQ7kNvwFMkOP-&_nc_oc=Adks1ztCx002AIMaJPbP9Y2OujAnW4GuUOCpTkHOEeIt-HnHfpv4SkKK_Ut09WTQX5A&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Pj9fM97ROjIrclZOrqYqyA&oh=00_AfvcQtStai6xPPUbYPm_BzIfNI1OoYHl4KLv-3zeZ8jDOA&oe=6983DB0E" alt="Synergetics" height="300px">
+               <div class="flex-container">
+        <!-- Image Element -->
+        <!-- Replace 'https://via.placeholder.com' with your image URL -->
+        <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/561537058_10226403598990201_6595890228945255927_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEawydBcs_IKEs8366TCFrXMkbwYarbrJgyRvBhqtusmNI16faDbmk3qQzVMMbZeCA&_nc_ohc=g86aT19wUzQQ7kNvwFMkOP-&_nc_oc=Adks1ztCx002AIMaJPbP9Y2OujAnW4GuUOCpTkHOEeIt-HnHfpv4SkKK_Ut09WTQX5A&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Pj9fM97ROjIrclZOrqYqyA&oh=00_AfvcQtStai6xPPUbYPm_BzIfNI1OoYHl4KLv-3zeZ8jDOA&oe=6983DB0E" alt="Synergetics" height="300px">
+
+        <!-- Embedded Video 1 (Example: YouTube) -->
+        <!-- Replace the src URL with your actual embed code src -->
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/LQu01TsjWxo?si=5jyNmEVb2X9zhG48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- Embedded Video 2 (Example: YouTube) -->
+        <!-- Replace the src URL with your actual embed code src -->
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/zJJZoLifdJY?si=fBOTL36THX7peL2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
               </div>
             </div>
             <div class="w-full md:w-2/5 lg:w-1/3">
