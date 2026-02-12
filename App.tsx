@@ -61,6 +61,82 @@ const App: React.FC = () => {
         videoTitle="Summit Expedition Project Documentary"
       />
 
+       {/* NEW SECTION: David vs Goliath Strategy */}
+      <section id="david-goliath" className="py-24 px-6 relative overflow-hidden bg-[radial-gradient(circle_at_2px_2px,rgba(236,72,153,0.05)_1px,transparent_0)] bg-[size:40px_40px]">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-6xl font-serif-heading font-bold uppercase tracking-tight leading-tight">
+              Deploying the Ancient Battle Strategy <br/>
+              <span className="text-pink-500">of King David Vrs Goliath</span>
+            </h2>
+            <div className="h-1 w-48 bg-pink-500 mx-auto"></div>
+          </div>
+
+          {/* Thinker vs Action Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Thinker: Buckminster Fuller */}
+            <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-4">
+              <div className="relative group">
+                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                 <img 
+                    src="input_file_2.png" 
+                    alt="Buckminster Fuller" 
+                    className="relative w-48 md:w-64 rounded-2xl border border-gray-800 shadow-xl object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                 />
+              </div>
+              <div className="text-center lg:text-left">
+                <span className="text-pink-500 font-bold uppercase tracking-widest text-xs">The Thinker</span>
+                <p className="text-gray-400 font-serif-heading text-lg">Buckminster Fuller</p>
+              </div>
+            </div>
+
+            {/* Action: David Killing Goliath */}
+            <div className="lg:col-span-8">
+              <div className="relative group rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <img 
+                  src="david_goliath.png" 
+                  alt="David Slaying Goliath" 
+                  className="w-full h-auto min-h-[400px] object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'input_file_6.png';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute bottom-8 left-8 right-8">
+                  <h4 className="text-3xl font-heading font-bold uppercase tracking-tighter text-white drop-shadow-lg">The Principle of Mind Over Brawn</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Video Embed */}
+          <div className="max-w-4xl mx-auto">
+            <VideoEmbed id="7p7v_t-O1uM" title="David and Goliath - Battle Strategy" />
+            <p className="mt-4 text-center text-xs text-gray-500 uppercase tracking-[0.3em] font-bold">Documentary: The Sling Strategy of David</p>
+          </div>
+
+          {/* Blockquote Section */}
+          <div className="max-w-4xl mx-auto px-6 py-12 bg-gray-900/40 border-l-4 border-pink-500 rounded-r-3xl backdrop-blur-sm relative group overflow-hidden">
+            <Quote className="absolute top-4 right-8 text-pink-500/5 group-hover:text-pink-500/10 transition-colors" size={120} />
+            <blockquote className="relative space-y-6">
+              <p className="text-xl md:text-2xl text-gray-200 font-light italic leading-relaxed tracking-wide">
+                "Craft tools used as weapons make it possible for physically small humans to overwhelm physically either big humans or even bigger animals—tiger pitfall traps are one example. This brings us to the slaying of the giant Goliath by David and to the generalized principle of brain-mastered brawn by mind-mastered brain, of the metaphysical mastering the physical."
+              </p>
+              <p className="text-xl md:text-2xl text-gray-200 font-light italic leading-relaxed tracking-wide">
+                "This in turn brings us to the present confrontation of humanity by the Grunch of Giants—the supranational corporate conglomerates—the greatest giants in all history invisibly 'RoughRiding' planet Earth. While you can see their skyscrapers and factories, these are only the physical properties occupied by the human-drone workers employed by the elusively invisible corporate conglomerates."
+              </p>
+              <footer className="pt-6 border-t border-gray-800 flex items-center gap-4">
+                <div className="h-px w-12 bg-pink-500"></div>
+                <cite className="not-italic font-heading font-bold uppercase tracking-widest text-pink-500 text-sm">
+                  Buckminster Fuller (Grunch of Giants)
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+
       {/* Part 2: Lupe Fiasco (2006-2009) */}
       <ArticleSection
         id="fiasco"
