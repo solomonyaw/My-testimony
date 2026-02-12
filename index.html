@@ -544,6 +544,24 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
       });
+
+      // Mobile Menu Logic
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+        const links = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+          const isOpen = overlay.classList.toggle('open');
+          openIcon.classList.toggle('hidden', isOpen);
+          closeIcon.classList.toggle('hidden', !isOpen);
+        }
+
+        toggleBtn.addEventListener('click', toggleMenu);
+        links.forEach(link => link.addEventListener('click', toggleMenu));
+      });
+      
     </script>
   </body>
 </html>
