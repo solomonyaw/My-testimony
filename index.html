@@ -10,105 +10,22 @@
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-@media only screen and (max-width:767px) {
-
-  .flex-container{
-  display:flex;
-    flex-direction:row;
-  }
-  
-       .container2{
-         display:flex;
-         flex-direction:row;
-       }
-        #fullers{ 
-          display:flex;
-          flex-direction:column;
-          width:300px;
-        }
-        .heading{
-          font-size:4px;
-        }
-        .heading-text{
-            font-size:2px;
-          
-        }
-  
-}
-      /* The main container uses display: flex to arrange its children in a row */
-        .container2 {
-            display: flex;
-          flex-direction: row;
-            align-items: center; /* Aligns items vertically in the center of the container */
-            justify-content: center; /* Centers items horizontally within the container (optional) */
-            gap: 20px; /* Adds space between the image and the text content */
-            border: 1px solid #ccc;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 10px auto; /* Centers the container itself on the page */
-            background-color: #f9f9f9;
-            border-radius: 8px;
-          color:black;
-        }
-
-        /* Styling for the image within the container */
-        .flex-item img {
-            max-width: 250px; /* Ensures the image is responsive */
-            height: 150px;
-            display: block; /* Removes extra space below the image */
-            border-radius: 5px;
-        }
-      .flex-container {
-    display: flex;         
-        flex-direction: row;/* Activates flexbox layout */
-    justify-content: center; /* Centers the items within the container horizontally */
-    align-items: center;    /* Aligns items vertically in the middle */
-    gap: 20px;              /* Adds space between the items */      /* Allows items to wrap onto a new line if the screen is too small */
-    padding: 10px;
-}
-
-/* Style for all direct children of the flex container (image and iframes) */
-.flex-container > * {
-    /* Ensures consistent sizing. Adjust the width as needed. 
-       calc(33.33% - 14px) makes each item roughly one-third of the container width minus gap space. */
-    width: 350px; 
-    
-    /* Ensures all elements have a consistent aspect ratio (standard 16:9 for videos/placeholders) */
-    height: 400px; 
-    aspect-ratio: 16 / 9;
-}
-      
-      body {
-        background-color: #030712;
-        color: #f3f4f6;
-        font-family: 'Inter', sans-serif;
-      }
-      .font-heading {
-        font-family: 'Space Grotesk', sans-serif;
-      }
-      .font-serif-heading {
-        font-family: 'Cinzel', serif;
-      }
-      .laser-glow {
-        box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
-      }
-      .laser-text {
-        text-shadow: 0 0 8px rgba(236, 72, 153, 0.6);
-      }
-      .animate-fade-in-up {
-        animation: fadeInUp 0.8s ease-out forwards;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
+*{box-sizing:border-box;}
+html,body{width:100%;overflow-x:hidden;}
+body{background-color:#030712;color:#f3f4f6;font-family:'Inter',sans-serif;}
+.font-heading{font-family:'Space Grotesk',sans-serif;}
+.font-serif-heading{font-family:'Cinzel',serif;}
+img{max-width:100%;height:auto;display:block;}
+iframe{max-width:100%;width:100%;}
+.flex-container{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;padding:10px;}
+.flex-container>*{width:min(100%,600px);height:auto;}
+.container2{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:30px;width:90%;max-width:1000px;margin:20px auto;padding:20px;background:#f9f9f9;color:black;border-radius:10px;}
+.flex-item,.text-content{flex:1 1 300px;}
+.animate-fade-in-up{animation:fadeInUp .8s ease-out forwards;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){section{padding-left:20px!important;padding-right:20px!important;}h1{font-size:2.2rem!important;line-height:1.15;}h2{font-size:1.8rem!important;}p{font-size:1rem!important;line-height:1.7;}.container2,.flex-container{flex-direction:column;}img{width:100%!important;height:auto!important;}iframe{width:100%!important;height:auto!important;min-height:220px;}.py-24{padding-top:4rem!important;padding-bottom:4rem!important;}.py-20{padding-top:3rem!important;padding-bottom:3rem!important;}}
+@media(max-width:420px){h1{font-size:1.8rem!important;}h2{font-size:1.5rem!important;}p{font-size:.95rem!important;}}
+</style>
   <script type="importmap">
 {
   "imports": {
@@ -272,7 +189,7 @@
                   </div>
                 </div>
                 <p class="text-gray-500 text-sm italic text-center px-4">Enemy of the State: A Love Story (2009 Mixtape)</p>
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/zp11_AexEcg?si=uQa16mbHXbeRHsLm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/zp11_AexEcg?si=uQa16mbHXbeRHsLm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -281,7 +198,7 @@
         <!-- Middle Break - Collage -->
         <section class="py-24 bg-gray-950">
           <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/B7wCjqvyCfk?si=W5EylBdTMppAnkwb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <div class="space-y-6">
+           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/B7wCjqvyCfk?si=W5EylBdTMppAnkwb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <div class="space-y-6">
               <h2 class="text-3xl font-heading font-bold uppercase laser-text">Only God Is Great, Enemy Of The State</h2>
               <p class="text-gray-400 italic">
                 "Never great 'cause God is great... God has been with me since birth and my purpose as an artist is to serve God through my music."
@@ -328,11 +245,11 @@
 
         <!-- Embedded Video 1 (Example: YouTube) -->
         <!-- Replace the src URL with your actual embed code src -->
-       <iframe width="1000" height="215" src="https://www.youtube.com/embed/LQu01TsjWxo?si=5jyNmEVb2X9zhG48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/LQu01TsjWxo?si=5jyNmEVb2X9zhG48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <!-- Embedded Video 2 (Example: YouTube) -->
         <!-- Replace the src URL with your actual embed code src -->
-       <iframe width="1000" height="215" src="https://www.youtube.com/embed/zJJZoLifdJY?si=fBOTL36THX7peL2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/zJJZoLifdJY?si=fBOTL36THX7peL2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
               </div>
             </div>
@@ -402,7 +319,7 @@
             </div>
             <div class="max-w-4xl mx-auto">
                <div style="margin-bottom:35px;" class="relative aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl group">
-                <iframe width="425" height="315" src="https://www.youtube.com/embed/NGpewrwBy0c?si=Go8jmWXbugl0CLMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/NGpewrwBy0c?si=Go8jmWXbugl0CLMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   <p class="mt-3 text-center text-xs text-gray-500 uppercase tracking-widest font-medium">A History of the True Hebrews (Documentary Reupload) </p>
                </div>
               <img src="jewsGhana.jpg" alt="Modern Egypt" width="400px" height="250px" onerror="this.src='input_file_4.png';">
